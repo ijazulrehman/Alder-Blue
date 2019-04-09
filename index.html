@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Alder Blue</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Your Imaginations">
+  <!-- <meta name="keywords" content="global, template, html, sass, jquery"> -->
+  <meta name="author" content="IJAZ UL REHMAN">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+ <link rel="icon" href="./favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+<div class="custom-overlay-wrapper">
+  <div>
+      <img src="./loading2.gif" alt="loading">
+  </div>
+</div>  
+<!-- notification for small viewports and landscape oriented smartphones -->
+<div class="device-notification">
+  <a class="device-notification--logo" href="#0">
+    <img src="assets/img/logo.png" alt="Alder Blue">
+    <p>Alder Blue</p>
+  </a>
+  <p class="device-notification--message">Alder Blue has so much to offer that we must request you orient your device to portrait or find a larger screen. You won't be disappointed.</p>
+</div>
+
+<div class="perspective effect-rotate-left">
+  <div class="container"><div class="outer-nav--return"></div>
+    <div id="viewport" class="l-viewport">
+      <div class="l-wrapper">
+        <header>
+          <div class="header">
+            <!-- <div class="logo-wrapper"> -->
+            <a class="header--logo" href="#0">
+                <img src="assets/img/logo.png" alt="Alder Blue">
+                <p>Alder Blue</p>
+              </a>
+            <!-- </div> -->
+            <!-- <button class="header--cta cta">Hire Us</button> -->
+            <div class="header--nav-toggle">
+               <svg xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                width="0.778in" height="0.778in">
+                <image  x="0px" y="0px"  width="48px" height="48px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA4CAMAAACfWMssAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABzlBMVEUBQYD///8BQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYABQYD////ppXEZAAAAmHRSTlMAAAM2c6HG4vEHV63wE4HsCoTz421GJhIGTeDhKwiT0lgClBnO62IB36wiY5vD5ZyrJOn6bBBxzxz0SQyF7kIbD/U6U7tSuJX5nck5N8iZTE/C924RDeQw0A7o1x/YCV+XXoL4MjFUWecqcnApPMTdOyGaZCNBHR7y7Z+gaCUo/lDHg11VXBSYh2tRnks15gUa6qphRQuidNeNCBgAAAABYktHRAH/Ai3eAAAAB3RJTUUH4wMcAAMRQPYiSgAABENJREFUSMedV/9fUlcYPkdFIMAkUEByyfpC2kDUq2BBWU7TTZYaGrTWvjidbo22zKWZWbS5VVu21trz5+4951703nHvhc/eH+R+3nMfOe/zPu8XGDOxpuYWR6vTBbicrY6W5ib9GdesFuU+4vHCYF7PEXddoK/tKEzsaJvPFtjuPybfCziCHZ0hdzjU2RF0BKTrmL/dGhjpEq9E/ceN/+64Pyr9EQtg93vi+ERPE6uxWM8JcfZ+txnw5Ck6On0mzkwtfuY0HZ86WQvsPEsHvVUK+s59kEh64U0m+s/1qa5Qil442/lf4MAgMKSoz8MjaQOl6ZFh6VeGgMEBIzBDtIyel48XspT5nEe5eGmMjV26qHhyJITsBXF0fpQoyuiBborv8hX5OJ4EPpxw68JzT0wCyXHxeOUyxenWAa8CU5Ls7mngo49rqJnJA58QpezaFHD1EDhLgQRldHOYvx4zITV2fR6JgoiTXp2tAhfodh6ptzQWb5ing91YRFFw3kvXLmnALHAzJO6Zx6e3mJXd+gz525SVm0BWBfpIn5+Loy8QyDBrywQwTcr5knTrk8CvSGdCL+NY+prZ2fISVhiPk/raBDBMWvqG3KVVKMzeFAxSeD2kzDCXlEZjMtJ8rA4wlhfhxboEsZKmrMiEFzOsns3AO8y5n0TNmZuoWSPft5jUThM19Z84QE7iO87vED1u9j3Vu3ClMWEJLB8AJ5CmVNwFfmAtgIM8PyIXrntTYjKHPs5Jly3sHiSZ6+htACcYWec8CNxjc0AHOfpVsda1IPo57wDmGPWh+zKwjYaAGyhzfp8yyKhqS+QI4CfdccKUUmEPsMi5D9hkdCQcLgk3A5YNwBI2OQ8LkAZU/zZggAROsU31qsZvtDb5jXTVrSo5xhit7QGSkpyuajrKDbOa19KhCUCXRzutUh4fagIgyW2T49Ghcuy0ylJ4pEmORO4kx0DDWt3RRC7K6g7TV4edyep4LMtKFLKf6evRzmQ9qoUsWkdXTHSA3fodoHmXOkC1dYRp6D9houc8rdtznoqe80RrVqxCg4TaY2mwkS43xuM0oCoHDfkZfa5gadkWtzyPnxn/hajZOxgBq2IE/NpIJy+sAr9ps6NEQ0ek/3YjsyOlGzqMwpXx7RXhtJxWThT3GHtOr744HKwvqcCu0Wchgfmg6XwMqvPxdxqsL3UTuT2tjfLuh0C+diL/oU1kMcqL7YblwVldHlZe0Q4Q2deh9iOTu3i1wtTlIZCxWlcWxNaxlVI2XpfYwusNJbUlto4Fpq4rfw6YLkhvRFZYYaRoqKqi3HNCb8SC9LjOSta33l9OuuBKlqfXRWdh8b+sVrL/vwSSRdT1srJmhK1V7NdOkZasuuhGt5W3O4X9/cLOW2U7qi662b+ZNZAUX9kyW623KvartbDwrMdlRLk8s4f9yBrI5M+Hd63OUQzl7ra++2fG9OfDv6RE0rW73+bTAAAAAElFTkSuQmCC" />
+                </svg>
+            </div>
+          </div>
+        </header>
+        <nav class="l-side-nav">
+          <ul class="side-nav">
+            <li class="is-active"><span>Home</span></li>
+            <li><span>Services</span></li>
+            <li><span>We Serve</span></li>
+            <li><span>Process</span></li>
+            <li><span>Contact</span></li>
+            <!-- <li><span>Hire us</span></li>
+            <li><span>Hire you</span></li>
+            <li><span>Hire bire</span></li> -->
+          </ul>
+        </nav>
+        <ul class="l-main-content main-content">
+          <li class="l-section section section--is-active">
+            <div class="intro">
+              <div class="intro--banner">
+                <h1> Creating Your<br>Imaginations<br></h1>
+                <button class="cta">Work with us 
+                  <span class="btn-background ">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                        <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                          <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
+                        </g>
+                        </svg>
+                  </span>
+
+                  <!-- <span class="btn-background"></span> -->
+                </button>
+               
+
+              </div>
+              <div class="intro--image">
+                
+                  <img style="width:38em;" src="assets/img/women.png" alt="Welcome">
+                  <div class="circle-wrapper">
+                    <div class="circle-light-blue">
+                        <div class="circle-yellow">
+  
+                          </div>
+                    </div>
+  
+                      <!-- <div class="circle-yellow">
+  
+                        </div> -->
+                  </div>
+              </div>
+              <div class="intro--options">
+                <a href="#0">
+                  <h3>We deliver.......</h3>
+                  <p>
+                    We digitally transform businesses by merging imagination and technology to help them grow
+                  </p>
+                </a>
+                <!-- <a href="#0">
+                  <h3>Fantasy interactive</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do.</p>
+                </a>
+                <a href="#0">
+                  <h3>Paul &amp; shark</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do.</p>
+                </a> -->
+              </div>
+            </div>
+          </li>
+          <li class="l-section section">
+            <div class="work">
+              <h2>WHAT WE DO</h2>
+              <div class="work--lockup">
+                <ul class="slider">
+                  <li class="slider--item slider--item-left">
+                    <a href="#0" 
+                       onclick="openDynamicModel('Web Design')">
+                      <div class="slider--item-image">
+                        <img src="assets/img/web-design.jpg" alt="WEB DESIGN">
+                      </div>
+                      <p class="slider--item-title">WEB DESIGN</p>
+                      <p class="slider--item-description">Web designing is one of the most important aspects of the overall web development services.
+                      </p>
+                    </a>
+                  </li>
+                  <li class="slider--item slider--item-center">
+                      <a href="#0" 
+                         onclick="openDynamicModel('Visual Design')">
+                        <div class="slider--item-image">
+                          <img src="assets/img/visual-design.jpg" alt="VISUAL DESIGN">
+                        </div>
+                        <p class="slider--item-title">VISUAL DESIGN</p>
+                        <p class="slider--item-description">In today's business world, where every consumer is overwhelmed with choice and surrounded by brands desperate to catch their attention, image counts
+                        </p>
+                      </a>
+                  </li>
+                  <li class="slider--item slider--item-right">
+                    <a href="#0"
+                       onclick="openDynamicModel('E-Commerce')">
+                      <div class="slider--item-image">
+                        <img src="assets/img/ecom.jpg" alt="ECOMMERECE">
+                      </div>
+                      <p class="slider--item-title">ECOMMERECE</p>
+                      <p class="slider--item-description">Alder Blue e-Commerce consulting helps create a holistic e-Commerce strategy.</p>
+                    </a>
+                  </li>
+                  <li class="slider--item slider--item-right">
+                    <a href="#0"
+                    onclick="openDynamicModel('Content Management Systems')">
+                      <div class="slider--item-image">
+                        <img src="assets/img/cms.jpg" alt="CONTENT MANAGEMENT SYSTEM">
+                      </div>
+                      <p class="slider--item-title">CONTENT MANAGEMENT SYSTEMS</p>
+                      <p class="slider--item-description">We will provide a reliable, scalable CMS that will enable your business to be more successful and productive.</p>
+                    </a>
+                  </li>
+                  <li class="slider--item slider--item-right">
+                      <a href="#0"
+                          onclick="openDynamicModel('Web Development')">
+                        <div class="slider--item-image">
+                          <img src="assets/img/web-dev.jpg" alt="WEB DEVELOPMENT">
+                        </div>
+                        <p class="slider--item-title">WEB DEVELOPMENT</p>
+                        <p class="slider--item-description">Alder Blue provides professional web development services with our team of talented developers.</p>
+                      </a>
+                  </li>
+                  <li class="slider--item slider--item-right">
+                      <a href="#0"
+                      onclick="openDynamicModel('Mobile Development')">
+                        <div class="slider--item-image">
+                          <img src="assets/img/mobile-dev.jpg" alt="MOBILE DEVELOPMENT">
+                        </div>
+                        <p class="slider--item-title">MOBILE DEVELOPMENT</p>
+                        <p class="slider--item-description">Whether you require a mobile application, Alder Blue can deliver a cutting edge product that utilizes of modern mobile technology.</p>
+                      </a>
+                  </li>
+                  <li class="slider--item slider--item-right">
+                      <a href="#0"
+                       onclick="openDynamicModel('Digital Marketing')">
+                        <div class="slider--item-image">
+                          <img src="assets/img/marketing.jpg" alt="DIGITAL MARKETING">
+                        </div>
+                        <p class="slider--item-title">DIGITAL MARKETING</p>
+                        <p class="slider--item-description">Our digital marketing strategy is built on the foundation of driving measurable results.</p>
+                      </a>
+                  </li>
+                </ul>
+                <div class="slider--prev">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                  <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                    <path d="M561,1169C525,1155,10,640,3,612c-3-13,1-36,8-52c8-15,134-145,281-289C527,41,562,10,590,10c22,0,41,9,61,29
+                    c55,55,49,64-163,278L296,510h575c564,0,576,0,597,20c46,43,37,109-18,137c-19,10-159,13-590,13l-565,1l182,180
+                    c101,99,187,188,193,199c16,30,12,57-12,84C631,1174,595,1183,561,1169z"/>
+                  </g>
+                  </svg>
+                </div>
+                <div class="slider--next">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                  <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                    <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
+                  </g>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="l-section section">
+            <div class="services">
+              <!-- <div class="about--banner">
+                
+                <a href="#0">Career
+                  <span>
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                    <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                      <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
+                    </g>
+                    </svg>
+                  </span>
+                </a>
+                <img src="assets/img/about-visual.png" alt="About Us">
+                <h2>We<br>believe in<br>quality<br>service</h2>
+              </div>
+              <div class="about--options">
+                <a href="#0">
+                  <h3>Winners</h3>
+                </a>
+                <a href="#0">
+                  <h3>Philosophy</h3>
+                </a>
+                <a href="#0">
+                  <h3>History</h3>
+                </a>
+              </div> -->
+              <div class="services--options">
+                  <div>
+                      <div class="flip-card">
+                          <div class="flip-card-inner">
+                            <div class="flip-card-front bg-y pt-1em">
+                                <img width="57px" height="65px"  src="./assets/img/icons/e-com.png" alt="e-commer">
+                                <!-- <svg 
+                                xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                width="0.792in" height="0.903in">
+                               <image  x="0px" y="0px" width="57px" height="65px"  xlink:href="data:img/png;base64,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" />
+                               </svg> -->
+                            </div>
+                            <div class="flip-card-back bg-y">
+                              <h5>ECOMMERECE</h5> 
+                            </div>
+                          </div>
+                        </div>
+                        <div class="flip-card ">
+                            <div class="flip-card-inner">
+                              <div class="flip-card-front bg-pu pt-1em">
+                                  <!-- <svg 
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                                  width="0.861in" height="0.833in">
+                                 <image  x="0px" y="0px" width="62px" height="60px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD4AAAA8CAQAAACUAMHEAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfjAxIVFQYljwTyAAAEHUlEQVRYw+2YXWgcVRTHf3N3dt1022Rts0VqW+xSKU1rqN9fAUXzYKEvbcD69VDpi4gFfetrKSJYS6kVFAqppZjYKlWoiqBFS558KK0QsUFUSO1nPlrTbHaz2dnjw95Md4aZycwmm8XQ/zzscObe85977rnnv2cMwcYqdrKFezGoMoaCokA/PZxgKtI8mb7a5BeZLT6QlBD+MvQiU3TzIgB5yhgRV14mQQKAHRwNP83Uv5t4AbDo5SQlYhHJiyxnFw8BXZwgHzXsW0VE5DfJRgmb49opRRH5XVrDz1F2ygCMR0yYalTmmlG2bJpc9CaY4ae6UKEtR5miogyea9whbwj8EixLJ6ZOHwPoo18/eZ71lOzZN/iGf2tm12dum4iInJU1giDL5CtX4TwtGUGQJ+Wiw27JXokJgrwqEyIyIMujn3MnUmxwWdZxNwCrWOmwK9ocPizGZxv2S+zhNe6qCvuX/AnAj+znETvsca5xwFGYltDFmOeSFBP0c3FmcovP+BbTllZhVN+Nspu0bVfkXStdwce+hcbiBsd5j7FgcoCbPvYSwwGRVKQCnqbZTYZd09JTezn1e7Uhn5ULy2gCXucMx+pDPsgWhjwluUCWD+lAsZkerHqQT3HNzg83zvE5HUCaVGXf57rCGaH+iGjZnd/y6tL6BSssKdpY0hjyBHs5z2Fa/Yf4ZfsKnmWRXV6n6ONvff8o7fZJNrnMT+Q8PaxlK3G6OMzpaORpPmJzlaQKZ3iZEeAxeliN6AKrmOAAezw7nAQCFCsnOgp5C+0kHZYNtDICZMk67M1sIsGkh48yAvZrRiC/xLu8QVK/tYHFMa1qP/AJT2nHYHKd/Z7UoeBNXuIIpxyqNqTvh3mbpfaeK3K3NWquyCs03pjkSijPMRSggs5T/Y7aOBYQC0q4+pH/RTcDHOKc/5C5VrXbsHifXq5QaAQ5lHRh8sWCFZY75L7wS7gW2u2mAYR+hvT9WtbYZ9dkhF/tFsKNDBsZ4HIAu2ev1ixHXL3a15IWBGmXCw57Xt4R5ejVMtrjYukVkT5ZXdWdvSUiIt9JS1CvtpRnXJbHuQeANtY57Ek6faJ3H08DT3B/1LD/w0F2ENdhVyiO8wcAP/MFD9jdmckwhyh6+ohRAiZ9NwV/VTtIb9U/maItJld5iZX2B1LFqK+qBSp5EDnAdR97mcGZnIbFAj3nMWJMq/q8k48wDhQbo2qD7OMVvud8I8jhKCe5FTSgvgl3K/jxAs32/wu54fqtHcaMzwz3l4lKp1liombSSQSwAj0U9Ejd15o08TCKBwFopoOrxGtYbZ6NxIDFPMeYz+oLrAcgQyd5ypw1pJvtTBFnEVAmh1VT6IUETRiUyfl+gRSSJHV0ypicMuQmLTWHenbImezjTfszwPxBYfHpf7DJShge2ziNAAAAAElFTkSuQmCC" />
+                                 </svg>        -->
+                                 <img width="60px" height="68px"   src="./assets/img/icons/enterprise.png" alt="enterprise">                       
+                              </div>
+                              <div class="flip-card-back bg-pu">
+                                <h5>ENTERPRISE</h5> 
+                              </div>
+                            </div>
+                          </div>
+                  </div>
+                  <div class="m-auto">
+                      <div class="flip-card">
+                          <div class="flip-card-inner">
+                            <div class="flip-card-front  bg-lb pt-1em">
+                               
+                                <img width="70px" height="70px"   src="./assets/img/icons/startup.png" alt="startup">                       
+                            </div>
+                            <div class="flip-card-back  bg-lb">
+                              <h5>STARTUPS</h5> 
+                            </div>
+                          </div>
+                        </div>
+                  </div>
+                  <div>
+                      <div class="flip-card ">
+                          <div class="flip-card-inner">
+                            <div class="flip-card-front bg-g pt-1em">
+                               <img width="70px" height="70px"   src="./assets/img/icons/b2b.png" alt="b2b">                       
+                            </div>
+                            <div class="flip-card-back bg-g">
+                              <h5>B2B</h5> 
+                            </div>
+                          </div>
+                        </div>
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                              <div class="flip-card-front  bg-pi pt-1em">
+                                  <!-- <svg 
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                                  width="0.833in" height="0.847in">
+                                  <image class="bg-pi" x="0px" y="0px" width="60px" height="61px"  xlink:href="data:img/png;base64,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" />
+                                  </svg>   -->
+                                  <img width="70px" height="70px"   src="./assets/img/icons/b2c.png" alt="b2c">                       
+                       
+                                  </div>
+                              <div class="flip-card-back  bg-pi">
+                                <h5>B2C</h5> 
+                              </div>
+                            </div>
+                          </div>
+                  </div>
+              </div>
+              <div class="services--banner">
+                  <h2>We<br>believe in<br>quality of<br>service</h2>
+              </div>
+            </div>
+          </li>
+          <li class="l-section section">
+            <div class="process">
+                <h2 class="pt-1em">OUR PROCESS</h2>
+                <div class="process--options">
+                  <div class="text-center">
+                      <a href="#0" onclick="processDetail('Discover')">
+                          <img class="process-icon" src="assets/img/icons/ideas.png" alt="discover" />
+                          <h5>DISCOVER</h5>
+                      </a>
+                  </div>
+                  <div class="next-process">
+                      <svg 
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      width="9px" height="21px">
+                     <image  x="0px" y="0px" width="9px" height="21px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAfCAMAAAAyTAaFAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABCFBMVEWNCQn///+NCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQn////WR4ULAAAAVnRSTlMAAFL99Owq+64cEcH8M8efqDY6IJyjQqIaIZ2xFoxPqyukklUnHa98XJU0EKF5apaqdmeHOxmtYXeDTAalaHt6SBSwWIRtVFo+itPPk/lpgoYX+hL+61soto8AAAABYktHRAH/Ai3eAAAAB3RJTUUH4wMbAAIZyuGjgAAAAOZJREFUKM9t0tdaAjEQhuE/iGXXAoJrw4YKdsQuFsCCvZfv/i9FPXCzS5LD95lnJlOU6cnS26f4GWPUPxCEg0PDKUMjOeUZTVmhyJgixhM2weQUeU3/45+pxExATrPMWdM8CyFlLbJkTWWWK1S1wqo1rbG+waa2qFnTNoWQunbYtaY99g841BHH1tTg5JQzndO0phbtCy51xbU1dbgJfiNvaVpTjbsi96ZDwvTwqKdnY5L24sbF+Vpu3UZc99X935vbh6dfz1wid351d84l3rv3EXn25tuv7w4+qpXP7nvJfGX5Tt/VD70RNik5OYFNAAAAAElFTkSuQmCC" />
+                     </svg>
+                  </div>
+                  <div class="text-center">
+                      <a href="#0" onclick="processDetail('Design')">
+                        <img class="process-icon" src="assets/img/icons/design.png" alt="design"/>
+                        <h5>DESIGN</h5>
+                      </a>
+                  </div>
+                  <div class="next-process">
+                      <svg 
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      width="9px" height="21px">
+                     <image  x="0px" y="0px" width="9px" height="21px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAfCAMAAAAyTAaFAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABCFBMVEWNCQn///+NCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQn////WR4ULAAAAVnRSTlMAAFL99Owq+64cEcH8M8efqDY6IJyjQqIaIZ2xFoxPqyukklUnHa98XJU0EKF5apaqdmeHOxmtYXeDTAalaHt6SBSwWIRtVFo+itPPk/lpgoYX+hL+61soto8AAAABYktHRAH/Ai3eAAAAB3RJTUUH4wMbAAIZyuGjgAAAAOZJREFUKM9t0tdaAjEQhuE/iGXXAoJrw4YKdsQuFsCCvZfv/i9FPXCzS5LD95lnJlOU6cnS26f4GWPUPxCEg0PDKUMjOeUZTVmhyJgixhM2weQUeU3/45+pxExATrPMWdM8CyFlLbJkTWWWK1S1wqo1rbG+waa2qFnTNoWQunbYtaY99g841BHH1tTg5JQzndO0phbtCy51xbU1dbgJfiNvaVpTjbsi96ZDwvTwqKdnY5L24sbF+Vpu3UZc99X935vbh6dfz1wid351d84l3rv3EXn25tuv7w4+qpXP7nvJfGX5Tt/VD70RNik5OYFNAAAAAElFTkSuQmCC" />
+                     </svg>
+                  </div>
+                  <div class="text-center">
+                      <a href="#0"onclick="processDetail('Develop')">
+                        <img class="process-icon" src="assets/img/icons/develop.png" alt="Develop">
+                        <h5>DEVELOP</h5>
+                      </a>
+                  </div>
+                  <div class="next-process">
+                      <svg 
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      width="9px" height="21px">
+                     <image  x="0px" y="0px" width="9px" height="21px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAfCAMAAAAyTAaFAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABCFBMVEWNCQn///+NCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQn////WR4ULAAAAVnRSTlMAAFL99Owq+64cEcH8M8efqDY6IJyjQqIaIZ2xFoxPqyukklUnHa98XJU0EKF5apaqdmeHOxmtYXeDTAalaHt6SBSwWIRtVFo+itPPk/lpgoYX+hL+61soto8AAAABYktHRAH/Ai3eAAAAB3RJTUUH4wMbAAIZyuGjgAAAAOZJREFUKM9t0tdaAjEQhuE/iGXXAoJrw4YKdsQuFsCCvZfv/i9FPXCzS5LD95lnJlOU6cnS26f4GWPUPxCEg0PDKUMjOeUZTVmhyJgixhM2weQUeU3/45+pxExATrPMWdM8CyFlLbJkTWWWK1S1wqo1rbG+waa2qFnTNoWQunbYtaY99g841BHH1tTg5JQzndO0phbtCy51xbU1dbgJfiNvaVpTjbsi96ZDwvTwqKdnY5L24sbF+Vpu3UZc99X935vbh6dfz1wid351d84l3rv3EXn25tuv7w4+qpXP7nvJfGX5Tt/VD70RNik5OYFNAAAAAElFTkSuQmCC" />
+                     </svg>
+                  </div>
+                  <div class="text-center">
+                      <a href="#0" onclick="processDetail('Deploy')">
+                        <img class="process-icon" src="assets/img/icons/deploy.png" alt="Deploy">
+                        <h5>DEPLOY</h5>
+                      </a>
+                  </div>  
+                  <div class="next-process">
+                      <svg 
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      width="9px" height="21px">
+                     <image  x="0px" y="0px" width="9px" height="21px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAfCAMAAAAyTAaFAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABCFBMVEWNCQn///+NCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQmNCQn////WR4ULAAAAVnRSTlMAAFL99Owq+64cEcH8M8efqDY6IJyjQqIaIZ2xFoxPqyukklUnHa98XJU0EKF5apaqdmeHOxmtYXeDTAalaHt6SBSwWIRtVFo+itPPk/lpgoYX+hL+61soto8AAAABYktHRAH/Ai3eAAAAB3RJTUUH4wMbAAIZyuGjgAAAAOZJREFUKM9t0tdaAjEQhuE/iGXXAoJrw4YKdsQuFsCCvZfv/i9FPXCzS5LD95lnJlOU6cnS26f4GWPUPxCEg0PDKUMjOeUZTVmhyJgixhM2weQUeU3/45+pxExATrPMWdM8CyFlLbJkTWWWK1S1wqo1rbG+waa2qFnTNoWQunbYtaY99g841BHH1tTg5JQzndO0phbtCy51xbU1dbgJfiNvaVpTjbsi96ZDwvTwqKdnY5L24sbF+Vpu3UZc99X935vbh6dfz1wid351d84l3rv3EXn25tuv7w4+qpXP7nvJfGX5Tt/VD70RNik5OYFNAAAAAElFTkSuQmCC" />
+                     </svg>
+                  </div>
+                  <div class="text-center">
+                      <a href="#0" onclick="processDetail('Launch')">
+                        <img class="process-icon" src="assets/img/icons/launch.png" alt="launch">
+                        <h5>LAUNCH</h5>
+                      </a>
+                  </div>  
+                </div>
+                <div id = "processDetails" class="text-center">
+                  <h3>DISCOVER</h3>
+                  <p>In this phase initial planning and discovering the requirement for the project. 
+                    Each project has its own unique objectives, scope, and priorities. 
+                    The deliverables described in this phase assist in completing the initiation and 
+                    planning steps in an efficient and effective manner – like setup of project governance, 
+                    project plan and project schedule are prepared at this stage.
+                  </p>
+                </div>
+            </div>
+          </li>
+          <!-- <li class="l-section section">
+            <div class="contact">
+              <div class="contact--lockup">
+                <div class="modal">
+                  <div class="modal--information">
+                    <p>Pawia 5, 31-154 Kraków, Poland</p>
+                    <a href="mailto:ouremail@gmail.com">ouremail@gmail.com</a>
+                    <a href="tel:+148126287560">+48 12 628 75 60</a>
+                  </div>
+                  <ul class="modal--options">
+                    <li><a href="#0">Bēhance</a></li>
+                    <li><a href="#0">dribbble</a></li>
+                    <li><a href="mailto:ouremail@gmail.com">Contact Us</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li> -->
+          <li class="l-section section">
+            <div class="d-flex-wrap hire-wrapper">
+                <div class="hire">
+                    <h2>Work with us</h2>
+                    <div id="contactFormMessage"></div>
+                   <!-- checkout formspree.io for easy form setup -->
+                   <form id="contactForm" class="work-request" method="post" action="contact-mail.php">
+                     <div class="work-request--information">
+                       <div class="information-name">
+                         <input id="firstName" name="firstName" type="text" spellcheck="false" required>
+                         <label for="firstName">First Name</label>
+                       </div>
+                       <div class="information-name">
+                         <input id="lastName" name="lastName" type="text" spellcheck="false" required>
+                         <label for="lastName">Last Name</label>
+                       </div>
+                     </div>
+                     <div class="work-request--information">
+                         <div class="information-contact">
+                           <input id="contactEmail" name="email" type="email" spellcheck="false" required>
+                           <label for="email">Email</label>
+                         </div>
+                         <div class="information-contact">
+                             <input id="contactNumber" name="number" type="text" spellcheck="false" required>
+                             <label for="number">Phone</label>
+                           </div>
+                       </div>
+                       <div class="work-request--information">
+                           <div class="information-company">
+                               <input id="contactCompany" name="company" type="text" spellcheck="false" required>
+                               <label for="company">Company Name</label>
+                           </div>
+                         </div>
+                         <div class="work-request--information">
+                             <div class="information-company">
+                                 <input id="contactRequest" name="request" type="text" spellcheck="false" required>
+                                 <label for="request">Please tell us about your request.</label>
+                             </div>
+                           </div>
+                     <input type="submit" value="Send Request">
+                   </form>
+                 </div>
+                 <div class="contact--details">
+                     <!-- The Apex 2 Sheriffs Orchard<br>
+                     Coventry CV1 3PP<br>
+                     Email: ask@alderblue.co.uk<br>
+                     Phone: +44 (0) 121 0000 000 -->
+                     <div class="modal-overlay">
+                        <h2>Our Office</h2>
+                        <div class="modal--information">
+                          <p><img src="./assets/img/icons/address.png" alt="address"> The Apex 2 Sheriffs Orchard<br>
+                            Coventry CV1 3PP</p>
+                          <a href="mailto:ask@alderblue.co.uk"><img src="./assets/img/icons/mail.png" alt="mail">ask@alderblue.co.uk</a>
+                          <a href="tel:+148126287560"><img src="./assets/img/icons/phone.png" alt="phone">+44 (0) 121 0000 000</a>
+                        </div>
+                      </div>
+                 </div>
+            </div>
+            
+          </li>
+          <!-- <li class="l-section section">
+            zxszxz,x
+          </li>
+          <li class="l-section section">
+            23323
+          </li>  -->
+        </ul>
+        <div class="float-button-wrapper">
+          <button id="quoteButton" class="float-button">Quotes</button>
+        </div>
+
+       
+          
+      </div>
+       <!-- accept policy -->
+       <div id="acceptance-option" class="policy-acceptance-wrapper  text-center">
+         <div class="text">
+            We use cookies to personalize and enhance your experience on our site. 
+            Visit our <a href="#0" onclick="openDynamicModel('Privacy Policy')">  Privacy Policy</a> to learn more or manage your personal preferences 
+            in our Cookie Consent Tool. By using our site, you agree to our use of cookies.
+         </div>
+         <button onclick="policyAccepted()" class="c-btn pt-1em">Accept</button>
+       </div>
+      <!-- accept policy end-->
+    </div>
+  </div>
+  <ul class="outer-nav">
+    <li class="is-active">Home</li>
+    <li>Services</li>
+    <li>We Serve</li>
+    <li>Process</li>
+    <li>Contact</li>
+    <!-- <li>Hire us</li> -->
+  </ul>
+</div>
+
+<!-- modal 1 -->
+<div id="quoteModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span id="quoteClose" class="close">
+          <svg 
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          width="18px" height="18px" >
+         <image  x="0px" y="0px" width="18px" height="18px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAQAAAD8x0bcAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfjAxQUMBb0YvGaAAABS0lEQVQoz23Sv05TYRgH4KeHjQboIaRuLkxuJkYGoERjJEJwIFiMQGy4BB2c9Ba8CA2ankL/YIkQJIZLYHFgI7oKCYQUqqdxoK0H7Tt+vyf5vfnypqI3Zr22p/fkvPU1FR256cyC3R5kSlXoR+CFpgEbHvxHJlSFYq8CZUuaBpTkrpG7ykKxQv5jgA1PnQvVPOySSXVZl5bzawSg6olzoYpH7V0+ybr0TJEOYtuSC2nr7hlTk/FbQeUqDLoFm21Ws9MmxU4UJFatmHdiUMaZRR/+BknETzGIHSefkyhnx4hfLmRsmemFxlWFWlY81pBWMv0vuqNiWMuqyBeLGtIi95No3JaspufegboFp4Y6/xZgQt0NTSvWuuWfzTs1pFyaIxVNqhkWKyTI1cxY168hn4q+uaVltV10feYU9fvelx8Veul9z5M7dOC2/T80tF+4JWE36AAAAABJRU5ErkJggg==" />
+         </svg>
+      </span>
+      <h2 class="text-center">GET A FREE QUOTE</h2>
+      <div>
+          <form method="POST" class="quote-form">
+            <div class="d-flex-wrap justify-space-around">
+               <div>
+                  <h4>About You</h4>
+                  <input type="text" class="custom" placeholder="Name">
+                  <input type="email" class="custom" placeholder="Email Address">
+                  <input type="text" class="custom" placeholder="Phone Number">
+               </div>
+               <div>
+                  <h4>About Your Comapny</h4>
+                  <input type="text" class="custom" placeholder="Company Name">
+                  <input type="text" class="custom" placeholder="Current Website">
+                  <input type="text" class="custom" placeholder="Where are you/your company located">
+               </div>
+            </div>
+            <h4 class="text-center">What services are you after?</h4>
+            <div class="d-flex-wrap justify-space-around">
+                <div>
+                    <label class="checkbox-container">Brochure Website
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark"></span>
+                      </label>
+                      <label class="checkbox-container">Logo Design and Branding
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                      </label>
+                      <label class="checkbox-container">Search Engine and Optimization(SEO)
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                      </label>
+                      <label class="checkbox-container">E-Commerce Website 
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                      </label>
+                      <label class="checkbox-container">Complex Database/Programming
+                          <input type="checkbox">
+                          <span class="checkmark"></span>
+                      </label>
+                </div>
+                <div>
+                    <label class="checkbox-container">Mobile App/Mobile Layout
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark"></span>
+                      </label>
+                      <label class="checkbox-container">Content Management Website (CMS)
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                      </label>
+                      <label class="checkbox-container">Graphic Design
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                      </label>
+                      <label class="checkbox-container">Web Consultancy
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                      </label>
+                      <label class="checkbox-container">Domain/Hosting/Emails
+                          <input type="checkbox">
+                          <span class="checkmark"></span>
+                      </label>
+                </div>
+             </div>
+             <h4 class="text-center">When do you want to start project?</h4>
+             <div id="startTime" class="d-flex-wrap justify-space-around">
+                 <label class="radio-container">Within a week
+                    <input type="radio" checked="checked" name="startTime">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="radio-container">With in 2 weeks
+                      <input type="radio" name="startTime">
+                      <span class="checkmark"></span>
+                  </label>
+                  <label class="radio-container">Next month
+                    <input type="radio" name="startTime">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="radio-container">Date to be agreed upon
+                    <input type="radio" name="startTime">
+                    <span class="checkmark"></span>
+                  </label>
+             </div>
+             <h4 class="text-center">Your Budget</h4>
+             <div id="budget" class="d-flex-wrap justify-space-around">
+                 <label class="radio-container">Under £5000
+                    <input type="radio" checked="checked" name="budget">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="radio-container">£5000 - £10,000
+                      <input type="radio" name="budget">
+                      <span class="checkmark"></span>
+                  </label>
+                  <label class="radio-container">£10,000 - £25,000
+                    <input type="radio" name="budget">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="radio-container">£25,000 - £50,000
+                    <input type="radio" name="budget">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="radio-container">£50,000 +
+                    <input type="radio" name="budget">
+                    <span class="checkmark"></span>
+                  </label>
+             </div>
+
+             <div class="w-100 text-center pt-1em">
+                <textarea class="w-90 custom" style="display:inline-block;" placeholder="Brief Project Details"></textarea>
+                <button type="submit" class="c-btn text-center pt-1em">Quotes</button>
+             </div>   
+          </form>
+      </div>
+
+    </div>
+  
+</div>
+<!-- modal end -->
+
+
+<!-- dynamic modal -->
+   <!-- modal 1 -->
+<div id="dynamicModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span id="dynamicClose" class="close">
+          <svg 
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          width="18px" height="18px" >
+         <image  x="0px" y="0px" width="18px" height="18px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAQAAAD8x0bcAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfjAxQUMBb0YvGaAAABS0lEQVQoz23Sv05TYRgH4KeHjQboIaRuLkxuJkYGoERjJEJwIFiMQGy4BB2c9Ba8CA2ankL/YIkQJIZLYHFgI7oKCYQUqqdxoK0H7Tt+vyf5vfnypqI3Zr22p/fkvPU1FR256cyC3R5kSlXoR+CFpgEbHvxHJlSFYq8CZUuaBpTkrpG7ykKxQv5jgA1PnQvVPOySSXVZl5bzawSg6olzoYpH7V0+ybr0TJEOYtuSC2nr7hlTk/FbQeUqDLoFm21Ws9MmxU4UJFatmHdiUMaZRR/+BknETzGIHSefkyhnx4hfLmRsmemFxlWFWlY81pBWMv0vuqNiWMuqyBeLGtIi95No3JaspufegboFp4Y6/xZgQt0NTSvWuuWfzTs1pFyaIxVNqhkWKyTI1cxY168hn4q+uaVltV10feYU9fvelx8Veul9z5M7dOC2/T80tF+4JWE36AAAAABJRU5ErkJggg==" />
+         </svg>
+      </span>
+      <div id="dynamicModalContent" class="text-center">
+
+      </div>
+      </div>
+</div>
+<!-- dynamic modal end -->
+
+
+<script>
+    // Get the modal
+    var quoteModal = document.getElementById('quoteModal');
+    
+    // Get the button that opens the modal
+    var quoteBtn = document.getElementById("quoteButton");
+    
+    // Get the <span> element that closes the modal
+    var quoteClose = document.getElementById("quoteClose");
+    
+    // When the user clicks the button, open the modal 
+    quoteBtn.onclick = function() {
+      quoteModal.style.display = "block";
+    }
+    
+    // When the user clicks on <span> (x), close the modal
+    quoteClose.onclick = function() {
+      quoteModal.style.display = "none";
+    }
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == quoteModal) {
+        quoteModal.style.display = "none";
+      }
+    }
+
+    // Get the modal
+    var dynamicModal = document.getElementById('dynamicModal');
+    
+    // Get the button that opens the modal
+    var dynamicModalContent = document.getElementById("dynamicModalContent");
+    
+    // Get the <span> element that closes the modal
+    var dynamicClose = document.getElementById("dynamicClose");
+    
+    // When the user clicks the button, open the modal 
+    // quoteBtn.onclick = function() {
+    //   dynamicModal.style.display = "block";
+    // }
+    
+    // When the user clicks on <span> (x), close the modal
+    dynamicClose.onclick = function() {
+      dynamicModal.style.display = "none";
+    }
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == dynamicModal) {
+        dynamicModal.style.display = "none";
+      }
+    }
+
+    function openDynamicModel(content){
+      dynamicModal.style.display = "block";
+      var innerContent ;
+      if(content == "Content Management Systems"){
+        innerContent = '<iframe class="content-iframe" src="./content-management-systems.html"></iframe>';
+      }else if(content == "Digital Marketing"){
+        innerContent = '<iframe class="content-iframe" src="./digital-marketing.html"></iframe>';
+      }else if(content == "Mobile Development"){
+        innerContent = '<iframe class="content-iframe" src="./mobile-development.html"</iframe>';
+      }else if(content == "E-Commerce"){
+        innerContent = '<iframe class="content-iframe" src="./e-commerce.html"></iframe>';
+      }else if(content == "Web Design"){
+        innerContent = '<iframe class="content-iframe" src="./web-design.html"></iframe>';
+      }else if(content == "Web Development"){
+        innerContent = '<iframe class="content-iframe" src="./web-development.html"></iframe>';
+      }else if(content == "Visual Design"){
+        innerContent = '<iframe class="content-iframe" src="./visual-design.html"></iframe>';
+      }else if(content == "Privacy Policy"){
+        innerContent = '<iframe class="content-iframe" src="./privacy-policy.html"></iframe>';
+
+      }
+      
+      dynamicModalContent.innerHTML = innerContent;
+    }
+
+    var processDetailContent = document.getElementById("processDetails");
+
+    function processDetail(content){
+      var innerContent ;
+      var discover = "In this phase initial planning and discovering the requirement for the project. Each project has its own unique objectives, scope, and priorities. The deliverables described in this phase assist in completing the initiation and planning steps in an efficient and effective manner – like setup of project governance, project plan and project schedule are prepared at this stage."
+      var design = "The purpose of this phase is to achieve a common understanding of the company business objectives. It focuses on the wireframing/prototypes and web design concepts which ensure we design a site that delivers against your objectives. In this phase we confirm scope and determine delta requirements that will be developed in the next phase."
+      var develop = "The purpose of this phase is to implement all the business process delta requirements defined during the Design phase. The team configures, develops, tests and documents the solution in series of time-boxed iterations. Before the solution is released to next phase it is fully end-to-end integration tested and accepted by end users."
+      var deploy = "The purpose of this phase is to complete the cutover activities (including technical and load testing, end user training, system management and pre-launch check) to finalize your readiness to run. The Deployment phase also serves to resolve all remaining critical issues. On successful completion of this phase, you are ready to run your business in your live business environment."
+      var launch = "The purpose of this phase is to provide sustained support to business users to aid their transition into the new environment and help you achieve your full online potential."
+      if(content == "Discover"){
+        innerContent = "<h3>Discover</h3><div>"+discover+"</div>";
+      }else if(content == "Design"){
+        innerContent = "<h3>Design</h3><div>"+design+"</div>";
+      }else if(content == "Develop"){
+        innerContent = "<h3>Develop</h3><div>"+develop+"</div>";
+      }else if(content == "Deploy"){
+        innerContent = "<h3>Delpoy</h3><div>"+deploy+"</div>";
+      }else if(content == "Launch"){
+        innerContent = "<h3>Launch</h3><div>"+launch+"</div>";
+      }
+      
+      processDetailContent.innerHTML = innerContent;
+    }
+
+
+
+    // local storage policy accpetance
+    var acceptanceStatus = localStorage.getItem('accepted');
+    var acceptanceOption = document.getElementById('acceptance-option');
+    if(acceptanceStatus){
+         acceptanceOption.style.display = 'none';
+    }
+
+    function policyAccepted(){
+        localStorage.setItem('accepted', 'true');
+        acceptanceOption.style.display = 'none';
+    }
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
+<script src="assets/js/functions-min.js"></script>
+<script>
+    $(window).on('load', function(){
+      // $('#coverloading').hide();
+      $('.custom-overlay-wrapper').fadeOut(200);
+    })
+
+
+    var contactForm = $('#contactForm');
+    var contactFormMessage = $('#contactFormMessage');
+
+    $(contactForm).submit(function(event){
+        event.preventDefault();
+        var formData = $(contactForm).serialize();
+        // Submit the form using AJAX.
+        $.ajax({
+            type: 'POST',
+            url: $(contactFormMessage).attr('action'),
+            data: formData
+        })
+        .done(function(response) {
+            // Make sure that the formMessages div has the 'success' class.
+            $(contactFormMessage).removeClass('error');
+            $(contactFormMessage).addClass('success');
+
+            // Set the message text.
+            $(contactFormMessage).text(response.responseText);
+            alert('response');
+            // Clear the form.
+            // contactForm.hide();
+        })
+        .fail(function(data) {
+          alert('error');
+          // Make sure that the formMessages div has the 'error' class.
+          $(contactFormMessage).removeClass('success');
+          $(contactFormMessage).addClass('error');
+
+          // Set the message text.
+          if (data.responseText !== '') {
+              $(contactFormMessage).text(data.responseText);
+          } else {
+              $(contactFormMessage).text('Oops! An error occured and your message could not be sent.');
+          }
+      });
+    })
+</script>
+</body>
+</html>
